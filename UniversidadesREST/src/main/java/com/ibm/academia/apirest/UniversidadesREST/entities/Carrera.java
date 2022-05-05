@@ -6,10 +6,10 @@ import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
-import javax.persistence.criteria.CriteriaBuilder;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -38,9 +38,15 @@ public class Carrera implements Serializable
     @Column(name = "fecha_modificacion")
     private Date fechaModificacion;
 
+    @OneToMany(mappedBy ="carrera", fetch = FetchType.LAZY)
+    private Set<Alumno> alumnos;
+
+    @ManyToMany(mappedBy = "carreras", fetch = FetchType.LAZY)
+    private Set<Profesor>profesores;
 
 
-    public Carrera(Integer id, String nombre, Integer cantidadMaterias, Integer cantidadAnios) {
+
+    public Carrera(String nombre, int i, int i1) {
         this.id = id;
         this.nombre = nombre;
         this.cantidadMaterias = cantidadMaterias;
