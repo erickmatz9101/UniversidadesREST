@@ -1,4 +1,4 @@
-package com.ibm.acedemia.aperest;
+package com.ibm.acedemia.apirest;
 
 import com.ibm.academia.apirest.UniversidadesREST.entities.Carrera;
 import com.ibm.academia.apirest.UniversidadesREST.services.CarreraDAO;
@@ -16,11 +16,12 @@ public class Comandos implements CommandLineRunner
     @Override
     public void run(String... args) throws Exception {
 
-        Carrera finanzas = new Carrera("Ingenieria en finanzas",20,3);
+       /* Carrera finanzas = new Carrera();
+        finanzas.setNombre("Finanzas II");
 
         Carrera carreraGuardada= carreraDao.guardar(finanzas);
 
-        System.out.println(carreraGuardada.toString());
+        System.out.println(carreraGuardada.toString());*/
 
     }
 }

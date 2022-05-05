@@ -66,6 +66,18 @@ public class Carrera implements Serializable
         return Objects.hash(id, nombre);
     }
 
+    @Override
+    public String toString() {
+        return "Carrera{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", cantidadMaterias=" + cantidadMaterias +
+                ", cantidadAnios=" + cantidadAnios +
+                ", fechaAlta=" + fechaAlta +
+                ", fechaModificacion=" + fechaModificacion +
+                '}';
+    }
+
     @PrePersist
     private void antesPersistir(){
         this.fechaAlta=new Date();

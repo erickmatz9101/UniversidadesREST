@@ -32,7 +32,7 @@ public abstract class Persona implements Serializable
     @Column(name="dni",nullable = false, unique = true,length = 10)
     private String dni;
 
-    @Column(name = "fecja_alta")
+    @Column(name = "fecha_alta")
     private Date fechaAlta;
 
     @Column(name = "fecha_modificacion")

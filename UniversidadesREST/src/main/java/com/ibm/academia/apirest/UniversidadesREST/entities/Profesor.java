@@ -27,7 +27,7 @@ public class Profesor extends Persona
             inverseJoinColumns = @JoinColumn(name = "carrera_id")
 
     )
-    private Set<Carrera>carrreras;
+    private Set<Carrera>carreras;
 
     public Profesor(Integer id, String nombre, String apellido, String dni, Direccion direccion, BigDecimal sueldo) {
         super(id, nombre, apellido, dni, direccion);
