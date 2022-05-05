@@ -4,14 +4,8 @@ import com.ibm.academia.apirest.UniversidadesREST.entities.Persona;
 
 import java.util.Optional;
 
-public interface PersonaDAO
+public interface PersonaDAO extends GenericoDAO<Persona>
 {
-    Optional<Persona> buscarPorId(Integer id);
 
-    Persona guardar(Persona persona);
-
-    Iterable<Persona> buscarTodos();
-
-    void eliminarPorId(Integer id);
 
 }
