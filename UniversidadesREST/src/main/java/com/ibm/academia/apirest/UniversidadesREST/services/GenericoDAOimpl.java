@@ -3,39 +3,38 @@ package com.ibm.academia.apirest.UniversidadesREST.services;
 import java.util.Optional;
 
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.data.repository.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
 public class GenericoDAOimpl <E, R extends CrudRepository<E, Integer> > implements GenericoDAO<E>
 {
-    protected final R repository;
+	protected  final R repository;
 
-    public  GenericoDAOimpl(R repository){
-        this.repository = repository;
-    }
+	public GenericoDAOimpl(R repository){
+		this.repository=repository;
+	}
 
 	@Override
-	@Transactional(readOnly = true)
 	public Optional<E> buscarPorId(Integer id) {
-		return repository.findById(id);
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
-	@Transactional
 	public E guardar(E entidad) {
-		return repository.save(entidad);
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
-	@Transactional(readOnly = true)
 	public Iterable<E> buscarTodos() {
-		return repository.findAll();
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
-	@Transactional
 	public void eliminarPorId(Integer id) {
-		repository.deleteById(id);
+		// TODO Auto-generated method stub
+		
 	}
     
 }
+ 

@@ -15,7 +15,7 @@ public class Alumno extends Persona
     @JoinColumn(name = "carrera_id")
     private Carrera carrera;
 
-    public Alumno(String nombre, String apellido, String dni, Direccion direccion) {
+    public Alumno(Integer id, String nombre, String apellido, String dni, Direccion direccion) {
         super(id, nombre, apellido, dni, direccion);
     }
 

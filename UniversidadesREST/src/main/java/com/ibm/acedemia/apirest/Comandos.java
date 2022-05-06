@@ -19,7 +19,7 @@ public class Comandos implements CommandLineRunner
 
         Carrera carrera= null;
 
-        Optional <Carrera> oCarrerra = CarreraDAO.buscarPorId(2);
+        Optional <Carrera> oCarrerra = carreraDao.buscarPorId(2);
         if (oCarrerra.isPresent()){
             carrera = oCarrerra.get();
             System.out.println(carrera.toString());

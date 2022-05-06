@@ -10,11 +10,14 @@ import com.ibm.academia.apirest.UniversidadesREST.entities.Persona;
 @NoRepositoryBean
 public interface PersonaRepository extends CrudRepository<Persona, Integer>
 {
+    public Optional<Persona>buscarPorNombreYApellido(String nombre, String Apellido);
 
-	static Optional<Persona> findBy(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
+    public Optional<Persona>buscarPorDni(String dni);
+
+    public Iterable<Persona>buscarPorApellido(String apellido);
+
+
+
+
 
 }
