@@ -18,12 +18,14 @@ public class PersonaDAOimpl extends GenericoDAOimpl<Persona, PersonaRepository> 
     }
 
     @Override
-    public Optional<Persona> buscarPorDni(String dni) {
-        return Optional.empty();
+    public Optional<Persona> buscarPorDni(String dni)
+    {
+        return repository.buscarPorDni(dni);
     }
 
     @Override
-    public Iterable<Persona> buscarPorApellido(String apellido) {
-        return null;
+    public Iterable<Persona> buscarPorApellido(String apellido)
+    {
+        return repository.buscarPorApellido(apellido);
     }
 }

@@ -8,7 +8,6 @@ import com.ibm.academia.apirest.UniversidadesREST.entities.Persona;
 
 public interface AlumnoDAO extends PersonaDAO
 {
-
-
+    public Iterable<Persona>buscarAlumnoPorNombreCarrera(String nombre);
 
 }

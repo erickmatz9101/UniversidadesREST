@@ -2,6 +2,7 @@ package com.ibm.academia.apirest.UniversidadesREST.services;
 
 import java.util.Optional;
 
+import com.ibm.academia.apirest.UniversidadesREST.entities.Alumno;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -11,7 +12,7 @@ import com.ibm.academia.apirest.repositories.PersonaRepository;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
-public class AlumnoDAOimpl extends PersonaDAOimpl implements AlumnoDAO
+public class AlumnoDAOimpl extends GenericoDAOimpl<Persona, PersonaRepository > implements AlumnoDAO
 {
 
 	@Autowired
@@ -21,7 +22,12 @@ public class AlumnoDAOimpl extends PersonaDAOimpl implements AlumnoDAO
 	}
 
 	@Override
-	public Optional<Persona> buscarPorNombreYApellido(String nombre, String Apellido) {
+	public Iterable<Persona> buscarAlumnoPorNombreCarrera(String nombre) {
+		return repository.buscarAlumnoPorNombreCarrera(nombre);
+	}
+
+	@Override
+	public Optional<Persona> buscarPorNombreYApellido(String nombre, String apellido) {
 		return Optional.empty();
 	}
 
