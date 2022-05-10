@@ -1,4 +1,4 @@
-package com.ibm.acedemia.apirest;
+package com.ibm.academia.apirest.UniversidadesREST.utils;
 
 import com.ibm.academia.apirest.UniversidadesREST.entities.Carrera;
 import com.ibm.academia.apirest.UniversidadesREST.services.CarreraDAO;

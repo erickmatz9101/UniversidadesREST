@@ -15,19 +15,19 @@ public class GenericoDAOimpl <E, R extends CrudRepository<E, Integer> > implemen
 	@Override
 	public Optional<E> buscarPorId(Integer id) {
 		// TODO Auto-generated method stub
-		return null;
+		return repository.findById(id);
 	}
 
 	@Override
 	public E guardar(E entidad) {
 		// TODO Auto-generated method stub
-		return null;
+		return repository.save(entidad);
 	}
 
 	@Override
 	public Iterable<E> buscarTodos() {
 		// TODO Auto-generated method stub
-		return null;
+		return repository.findAll();
 	}
 
 	@Override

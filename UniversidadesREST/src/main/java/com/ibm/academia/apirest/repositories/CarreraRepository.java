@@ -12,21 +12,15 @@ import java.util.Optional;
 public interface CarreraRepository extends CrudRepository<Carrera, Integer>
 
 {
-
-
-    void deleteAll(Integer id);
-
-    Optional<Carrera> findAllById(Integer id);
-
     @Query("select c from Carrera c where c.cantidadAnios= ?1")
     public Iterable<Carrera> findByCantidadAnios(Integer cantidadAnios);
 
-    @Query("select c from Carrera  c where upper(c.nombre) like upper(%?1%)")
+    @Query("select c from Carrera  c where upper(c.nombre) like upper('%?1%')")
     public Iterable<Carrera> findCarrerasByNombreContains(String nombre);
 
-    @Query("select c from Carrera c where upper(c.nombre) like upper(%?1%)")
+    @Query("select c from Carrera c where upper(c.nombre) like upper('%?1%')")
     public Iterable<Carrera>findCarrerasByNombreIgnoreCase(String nombre);
 
-    @Query("select c from Carerra c where c.cantidadAnios >1")
+    @Query("select c from Carrera c where c.cantidadAnios >1")
     public Iterable<Carrera> findCarrerasByCantidadAniosAfter(Integer cantidadAnios);
 }

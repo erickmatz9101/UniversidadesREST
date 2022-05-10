@@ -11,6 +11,7 @@ public interface GenericoDAO<E>
 
     E guardar(E entidad);
 
+
     Iterable<E> buscarTodos();
 
     void eliminarPorId(Integer id);
