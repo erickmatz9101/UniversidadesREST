@@ -1,4 +1,4 @@
-package com.ibm.academia.apirest.controllers;
+package com.ibm.academia.apirest.UniversidadesREST.services.controllers;
 
 import com.ibm.academia.apirest.UniversidadesREST.entities.Carrera;
 import com.ibm.academia.apirest.UniversidadesREST.exceptions.BadRequestException;
