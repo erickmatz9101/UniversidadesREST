@@ -1,5 +1,6 @@
 package com.ibm.academia.apirest.UniversidadesREST.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
@@ -12,6 +13,7 @@ public class Alumno extends Persona
 {
 
     @ManyToOne(optional = true, cascade = {CascadeType.PERSIST, CascadeType.MERGE}, fetch = FetchType.LAZY)
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "alumnos"})
     @JoinColumn(name = "carrera_id")
     private Carrera carrera;
 
