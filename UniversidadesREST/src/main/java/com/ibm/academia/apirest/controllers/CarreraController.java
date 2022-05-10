@@ -70,7 +70,16 @@ public class CarreraController
         return new ResponseEntity<Carrera>(carreraGuardada, HttpStatus.CREATED);
     }
 
-    @PostMapping("/upd/carreraId/(carreraId)")
+    /**
+     * Endpoint para actualizar  un objeto de tipo carrera
+     * @param carreraId parametro para buscar la carrera
+     * @param carrera objeto con la informacion a modificar
+     * @return Retorna un objeto de tipo crarrera con la informacion actualizada
+     * @NotFoundException En caso de que falle actualizando el obejeto carrera
+     * @author Erick Martinez 10-05-21
+     */
+
+    @PutMapping("/upd/carreraId/(carreraId)")
     public ResponseEntity<?>actaualizarCarrera(@PathVariable Integer carreraId, @RequestBody Carrera carrera){
 
         Optional<Carrera> oCarrera = carreraDAO.buscarPorId(carreraId);
@@ -81,7 +90,22 @@ public class CarreraController
 
         return new ResponseEntity<Carrera>(carreraActualizada, HttpStatus.OK);
 
-
     }
+
+   /* @DeleteMapping("/carreraId/(carreraID)")
+    public ResponseEntity<?> eliminarCarrera(@PathVariable Integer carreraId);{
+
+        Map<String, Object> respuesta = HashMap<String, Object>();
+        Optional<Carrera> carrera= carreraDAO.buscarPorId(carreraId);
+
+        if (!carrera.isPresent()){
+            throw new NotFoundException(String.format("La carrera con Id: %d no existe", carreraId));
+
+            carreraDAO.eliminarPorId(carreraId);
+            respuesta.put("OK", "Carrera ID: " + carreraId+ "Eliminada Exitosamente");
+            return new ResponseEntity<Map<String, Object>>(respuesta, HttpStatus.NO_CONTENT);
+        }
+
+}*/
 
 }
