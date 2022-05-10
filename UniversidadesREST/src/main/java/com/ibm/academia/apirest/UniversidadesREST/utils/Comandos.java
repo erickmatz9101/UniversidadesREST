@@ -1,12 +1,11 @@
 package com.ibm.academia.apirest.UniversidadesREST.utils;
-import com.ibm.academia.apirest.UniversidadesREST.entities.Carrera;
-import com.ibm.academia.apirest.UniversidadesREST.entities.Persona;
+
 import com.ibm.academia.apirest.UniversidadesREST.services.CarreraDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-import java.util.Optional;
+
 
 @Component
 public class Comandos implements CommandLineRunner
@@ -18,7 +17,7 @@ public class Comandos implements CommandLineRunner
     @Override
     public void run(String... args) throws Exception {
 
-        Carrera ingSistemas = new Carrera("Ingenieria en Sistemas",60,5 );
+        /*Carrera ingSistemas = new Carrera("Ingenieria en Sistemas",60,5 );
         Carrera ingIndustrial = new Carrera("Ingenieria Industrial",55,5 );
         Carrera ingAlimentos = new Carrera("Ingenieria en Alimentos",53,5 );
         Carrera ingElectronica= new Carrera("Ingenieria en Electronica",45,5 );
@@ -34,7 +33,7 @@ public class Comandos implements CommandLineRunner
         carreraDao.guardar(licSistemas);
         carreraDao.guardar(licTurismo);
         carreraDao.guardar(licYoga);
-        carreraDao.guardar(licRecursos);
+        carreraDao.guardar(licRecursos);*/
 
         //Optional<Carrera>ingSistemas= carreraDao.buscarPorId(1);
 
