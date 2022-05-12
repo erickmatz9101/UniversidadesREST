@@ -1,6 +1,4 @@
 package com.ibm.academia.apirest.datos;
-
-import com.ibm.academia.apirest.entities.*;
 import com.ibm.academia.apirest.enums.TipoEmpleado;
 import com.ibm.academia.apirest.models.entities.Alumno;
 import com.ibm.academia.apirest.models.entities.Carrera;

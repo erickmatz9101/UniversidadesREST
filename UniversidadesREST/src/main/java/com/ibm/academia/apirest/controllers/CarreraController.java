@@ -2,6 +2,8 @@ package com.ibm.academia.apirest.controllers;
 
 import com.ibm.academia.apirest.exceptions.BadRequestException;
 import com.ibm.academia.apirest.exceptions.NotFoundException;
+import com.ibm.academia.apirest.mapper.CarreraMapper;
+import com.ibm.academia.apirest.models.dto.CarreraDTO;
 import com.ibm.academia.apirest.models.entities.Carrera;
 import com.ibm.academia.apirest.services.CarreraDAO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -106,5 +108,24 @@ public class CarreraController
         }
 
 }*/
+
+    /**
+     * Endpoint para cosultar todas las carreas
+     * @return
+     * @NotFoundException en caso de que no encuentre ninguen elemento de la bdd
+     * @author ErickMatz 12-05-22
+     */
+    @GetMapping("/Carreras/dto")
+    public ResponseEntity<?> obtenerCarrerasDTO()
+    {
+        List<Carrera> carreras = (List<Carrera>) carreraDAO.buscarTodos();
+        if (carreras.isEmpty())
+            throw new NotFoundException("No existen carreras en la base");
+        List<CarreraDTO> listaCarreras = carreras
+                .stream()
+                .map(CarreraMapper::mapCarrera)
+                .collect(Collectors.toList());
+        return new ResponseEntity<List<CarreraDTO>>(listaCarreras, HttpStatus.OK);
+    }
 
 }
