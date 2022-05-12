@@ -1,7 +1,8 @@
 package com.ibm.academia.apirest.repositories;
 
-import com.ibm.academia.apirest.entities.Persona;
 import org.springframework.stereotype.Repository;
+
+import com.ibm.academia.apirest.models.entities.Persona;
 
 @Repository("repositorioAlumnos")
 public interface AlumnoRepository extends PersonaRepository	 

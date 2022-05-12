@@ -2,6 +2,12 @@ package com.ibm.academia.apirest.datos;
 
 import com.ibm.academia.apirest.entities.*;
 import com.ibm.academia.apirest.enums.TipoEmpleado;
+import com.ibm.academia.apirest.models.entities.Alumno;
+import com.ibm.academia.apirest.models.entities.Carrera;
+import com.ibm.academia.apirest.models.entities.Direccion;
+import com.ibm.academia.apirest.models.entities.Empleado;
+import com.ibm.academia.apirest.models.entities.Persona;
+import com.ibm.academia.apirest.models.entities.Profesor;
 
 import java.math.BigDecimal;
 

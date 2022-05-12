@@ -1,7 +1,7 @@
 package services;
 
 import com.ibm.academia.apirest.datos.DatosDummy;
-import com.ibm.academia.apirest.entities.Carrera;
+import com.ibm.academia.apirest.models.entities.Carrera;
 import com.ibm.academia.apirest.repositories.CarreraRepository;
 import com.ibm.academia.apirest.services.CarreraDAO;
 
